@@ -2,14 +2,12 @@
  * 获取 bit 值
  */
 const getBit = (n) => {
-  let i = 1;
   const bit = [];
-  
-  while (n) {
-    const xor = (i ^ n);
-    if (xor <= n) {
+
+  let i = 1;
+  while (n >= i) {
+    if (i & n) {
       bit.push(i);
-      n = xor;
     }
     
     i *= 2;
