@@ -1,7 +1,7 @@
 /**
  * 获取 bit 值
  */
-const getBit = (n) => {
+const getFlags = (n) => {
   const bit = [];
 
   let i = 1;
@@ -14,4 +14,9 @@ const getBit = (n) => {
   }
   
   return bit;
+}
+
+const hasFlags = (a, b) => {
+  const and = (a & b); 
+  return and === a || and === b
 }
