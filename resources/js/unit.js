@@ -6,7 +6,7 @@ const getBit = (n) => {
 
   let i = 1;
   while (n >= i) {
-    if (i & n) {
+    if ((n & i) === i) {
       bit.push(i);
     }
     
